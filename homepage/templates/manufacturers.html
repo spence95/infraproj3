@@ -1,0 +1,45 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+    
+    
+    <div class="main-text">
+        <h2>Manufacturers
+            <div class="float-right">
+                <a href="/homepage/new_manufacturer">New Manufacturer</a>
+                <!--<a class="btn btn-info" href="/store/stores/">Active</a>-->
+                <!--<a class="btn btn-info" href="/store/stores/archive/">Inactive</a>-->
+                <!--<a class="btn btn-info" href="/store/stores/all/">All</a>-->
+            </div>
+        </h2>
+        
+
+        <table>
+            <thead>
+                <tr>
+                    <th>UID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                %for m in manufacturers:
+                    <tr>
+                        <td>${ m.UID }</td>
+                        <td>${ m.name }</td>
+                        <td>${ m.address }</td>
+                        <td>${ m.phone }</td>
+                        <td><a href="/homepage/edit_manufacturer/${ m.UID }">Edit</a></td>
+                        <td><a href="/homepage/delete_manufacturer/${ m.UID }">Delete</a></td>
+                    </tr>
+                %endfor
+            </tbody>
+        </table>
+        
+        
+    </div>
+
+</%block>
+

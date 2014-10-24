@@ -1,0 +1,44 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+    
+    
+    <div class="main-text">
+        <h2>Locations
+            <div class="float-right">
+                <a href="/homepage/new_location">New Location</a>
+                <!--<a class="btn btn-info" href="/store/stores/">Active</a>-->
+                <!--<a class="btn btn-info" href="/store/stores/archive/">Inactive</a>-->
+                <!--<a class="btn btn-info" href="/store/stores/all/">All</a>-->
+            </div>
+        </h2>
+        
+
+        <table>
+            <thead>
+                <tr>
+                    <th>UID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                %for l in locations:
+                    <tr>
+                        <td>${ l.UID }</td>
+                        <td>${ l.name }</td>
+                        <td>${ l.address }</td>
+                        <td>${ l.phone }</td>
+                        <td><a href="/homepage/edit_location/${ l.UID }">Edit</a></td>
+                        <td><a href="/homepage/delete_location/${ l.UID }">Delete</a></td>
+                    </tr>
+                %endfor
+            </tbody>
+        </table>
+        
+        
+    </div>
+
+</%block>

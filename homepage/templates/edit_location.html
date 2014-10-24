@@ -1,0 +1,21 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+
+    <br><br>
+    <h1>Edit Location:</h1>
+
+  
+    <br>
+    <form method="POST">
+        <table>
+            <tbody>
+                ${ form }
+            </tbody>
+        </table>
+        
+        <input type="submit" class = "btn btn-info" value="Save" />
+        <a class="btn btn-info" href="/homepage/locations">Cancel</a>
+    </form>
+
+</%block>

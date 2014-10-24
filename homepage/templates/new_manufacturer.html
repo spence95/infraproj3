@@ -1,0 +1,20 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+
+    <h1>New Manufacturer:</h1>
+
+  
+    <br>
+    <form method="POST">
+        <table>
+            <tbody>
+                ${ form }
+            </tbody>
+        </table>
+        
+        <input type="submit" value="Save" />
+        <a href="/homepage/manufacturers">Cancel</a>
+    </form>
+
+</%block>
